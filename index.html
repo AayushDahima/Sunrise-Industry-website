@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Industries – Corrugated Box Manufacturer | Okhla, New Delhi</title>
+<meta name="description" content="Premium corrugated boxes & paper carry bags manufacturer in Okhla, New Delhi since 1994. 3-ply, 5-ply, 7-ply, custom printed. Bulk orders. Call +91 8178077309">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9922A;
+  --gold-light: #E8B84B;
+  --gold-pale: #FDF6E7;
+  --ink: #0E0E0E;
+  --ink2: #1A1A1A;
+  --dark: #111111;
+  --cream: #FAFAF5;
+  --white: #FFFFFF;
+  --muted: #7A7A7A;
+  --border: rgba(14,14,14,0.09);
+  --wa: #25D366;
+  --wa-dark: #1aab4f;
+  --section-dark: #161610;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+/* ── NAVBAR ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0 5%; height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(250,250,245,0.92); backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(201,146,42,0.15);
+  transition: box-shadow 0.3s;
+}
+nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.1); }
+
+/* SVG LOGO in nav */
+.nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.nav-logo-svg { width: 44px; height: 44px; }
+.nav-logo-wordmark { display: flex; flex-direction: column; line-height: 1; }
+.nav-logo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px; font-weight: 600;
+  letter-spacing: 4px; color: var(--ink);
+  text-transform: uppercase;
+}
+.nav-logo-sub {
+  font-size: 9px; letter-spacing: 4px;
+  color: var(--gold); text-transform: uppercase;
+  font-weight: 500; margin-top: 2px;
+}
+.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-since {
+  font-size: 12px; font-weight: 500; letter-spacing: 1.5px;
+  color: var(--gold); text-transform: uppercase;
+  border-left: 2px solid var(--gold);
+  padding-left: 14px; line-height: 1.3;
+}
+.nav-since span { display: block; font-size: 10px; color: var(--muted); letter-spacing: 1px; font-weight: 400; }
+.nav-btns { display: flex; gap: 8px; }
+.btn-nav-call {
+  padding: 9px 18px; background: var(--ink); color: white;
+  border-radius: 100px; font-size: 12px; font-weight: 500;
+  text-decoration: none; display: flex; align-items: center; gap: 6px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-nav-call:hover { background: #333; transform: translateY(-1px); }
+.btn-nav-wa {
+  padding: 9px 18px; background: var(--wa); color: white;
+  border-radius: 100px; font-size: 12px; font-weight: 500;
+  text-decoration: none; display: flex; align-items: center; gap: 6px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-nav-wa:hover { background: var(--wa-dark); transform: translateY(-1px); }
+.btn-nav-call svg, .btn-nav-wa svg { width: 13px; height: 13px; fill: white; flex-shrink: 0; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; display: grid; grid-template-columns: 55% 45%;
+  position: relative; overflow: hidden;
+}
+.hero-left {
+  background: var(--dark); padding: 130px 7% 80px 7%;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.hero-left::before {
+  content: '';
+  position: absolute; bottom: -120px; right: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(201,146,42,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,146,42,0.1); border: 1px solid rgba(201,146,42,0.25);
+  color: var(--gold-light); font-size: 11px; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; padding: 6px 14px; border-radius: 100px;
+  margin-bottom: 36px; width: fit-content;
+  animation: fadeUp 0.6s ease both;
+}
+.hero-badge-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+
+.hero-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 5.5vw, 76px);
+  line-height: 1.05; color: white; font-weight: 600;
+  margin-bottom: 10px; animation: fadeUp 0.7s ease 0.1s both;
+}
+.hero-headline .gold { color: var(--gold-light); font-style: italic; }
+
+.hero-oneliner {
+  font-size: clamp(13px, 1.4vw, 16px); color: rgba(255,255,255,0.45);
+  letter-spacing: 3px; text-transform: uppercase; font-weight: 400;
+  margin-bottom: 32px; animation: fadeUp 0.7s ease 0.2s both;
+}
+.hero-desc {
+  font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.8;
+  max-width: 400px; margin-bottom: 44px; animation: fadeUp 0.7s ease 0.3s both;
+}
+.hero-desc strong { color: rgba(255,255,255,0.9); }
+
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fadeUp 0.7s ease 0.4s both; }
+.btn-gold {
+  padding: 15px 32px; background: var(--gold); color: white;
+  border-radius: 4px; font-size: 14px; font-weight: 600; letter-spacing: 0.5px;
+  text-decoration: none; display: flex; align-items: center; gap: 9px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 8px 28px rgba(201,146,42,0.35);
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(201,146,42,0.45); }
+.btn-gold svg { width: 17px; height: 17px; fill: white; }
+.btn-outline {
+  padding: 15px 32px; background: transparent;
+  border: 1px solid rgba(255,255,255,0.2); color: white;
+  border-radius: 4px; font-size: 14px; font-weight: 500;
+  text-decoration: none; display: flex; align-items: center; gap: 9px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+.btn-outline svg { width: 17px; height: 17px; fill: white; }
+
+/* Hero right — gold panel */
+.hero-right {
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; padding: 80px 6%;
+}
+.hero-right::before {
+  content: '';
+  position: absolute; top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  background: rgba(255,255,255,0.08); border-radius: 50%;
+}
+.hero-right::after {
+  content: '';
+  position: absolute; bottom: -80px; left: -60px;
+  width: 300px; height: 300px;
+  background: rgba(0,0,0,0.07); border-radius: 50%;
+}
+.hero-cards { display: flex; flex-direction: column; gap: 16px; position: relative; z-index: 1; width: 100%; max-width: 340px; animation: fadeUp 0.8s ease 0.35s both; }
+.hcard {
+  background: white; border-radius: 12px; padding: 20px 22px;
+  display: flex; align-items: center; gap: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transition: transform 0.3s;
+}
+.hcard:hover { transform: translateX(6px); }
+.hcard-icon { width: 46px; height: 46px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.hcard-icon.g { background: var(--gold-pale); }
+.hcard-icon.d { background: #F0F0F0; }
+.hcard-icon svg { width: 22px; height: 22px; }
+.hcard-title { font-size: 14px; font-weight: 600; color: var(--ink); }
+.hcard-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* Big logo watermark on hero right */
+.hero-watermark {
+  position: absolute; bottom: 20px; right: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 120px; font-weight: 600; color: rgba(255,255,255,0.08);
+  letter-spacing: -4px; line-height: 1; pointer-events: none; user-select: none;
+}
+
+/* ── STATS ── */
+.stats-bar {
+  background: var(--ink); padding: 28px 5%;
+  display: flex; justify-content: center; flex-wrap: wrap;
+}
+.stat { text-align: center; padding: 12px 52px; border-right: 1px solid rgba(255,255,255,0.08); }
+.stat:last-child { border-right: none; }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 46px; font-weight: 600; color: var(--gold); line-height: 1; }
+.stat-label { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 4px; text-transform: uppercase; letter-spacing: 1.5px; }
+
+/* ── SECTIONS ── */
+section { padding: 96px 5%; position: relative; }
+.section-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: var(--gold); margin-bottom: 12px; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 54px); font-weight: 600; line-height: 1.1; color: var(--ink); margin-bottom: 14px; }
+.section-title .gold { color: var(--gold); font-style: italic; }
+.section-title .white { color: white; }
+.section-desc { font-size: 15px; color: var(--muted); max-width: 520px; line-height: 1.75; }
+
+/* ── TAGLINES STRIP ── */
+.taglines-strip {
+  background: var(--gold); padding: 0; overflow: hidden;
+  display: flex; align-items: stretch;
+}
+.taglines-inner {
+  display: flex; align-items: center; gap: 0;
+  animation: marquee 28s linear infinite; white-space: nowrap;
+}
+.tline {
+  padding: 18px 40px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-style: italic; font-weight: 600;
+  color: white; border-right: 1px solid rgba(255,255,255,0.25);
+  white-space: nowrap; flex-shrink: 0;
+}
+.tline-dot { padding: 18px 20px; color: rgba(255,255,255,0.5); font-size: 22px; border-right: 1px solid rgba(255,255,255,0.25); flex-shrink: 0; }
+@keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+/* ── PRODUCTS ── */
+.products-section { background: white; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 56px; }
+.product-card {
+  border: 1px solid var(--border); border-radius: 16px; padding: 30px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  position: relative; overflow: hidden; cursor: default;
+}
+.product-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+}
+.product-card:hover { border-color: rgba(201,146,42,0.3); transform: translateY(-5px); box-shadow: 0 20px 50px rgba(201,146,42,0.1); }
+.product-card:hover::after { transform: scaleX(1); }
+.pc-icon { width: 50px; height: 50px; background: var(--gold-pale); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.pc-icon svg { width: 24px; height: 24px; }
+.pc-title { font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+.pc-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+.pc-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ptag { font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 100px; background: var(--gold-pale); color: var(--gold); border: 1px solid rgba(201,146,42,0.15); }
+.ptag.dk { background: #F2F2F2; color: #555; border-color: #E0E0E0; }
+
+/* ── WHY US ── */
+.why-section { background: var(--section-dark); }
+.why-section .section-desc { color: rgba(255,255,255,0.4); }
+.why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 56px; }
+.why-card {
+  background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px; padding: 30px;
+  transition: background 0.25s, transform 0.25s, border-color 0.25s;
+}
+.why-card:hover { background: rgba(201,146,42,0.07); transform: translateY(-4px); border-color: rgba(201,146,42,0.2); }
+.why-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 600; color: rgba(201,146,42,0.18); line-height: 1; margin-bottom: 14px; }
+.why-title { font-size: 16px; font-weight: 600; color: white; margin-bottom: 8px; }
+.why-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.65; }
+
+/* ── PROCESS ── */
+.process-section { background: var(--cream); }
+.process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 56px; position: relative; }
+.process-steps::before { content: ''; position: absolute; top: 34px; left: 10%; right: 10%; height: 1px; background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 10px, transparent 10px, transparent 20px); }
+.process-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+.pnum { width: 68px; height: 68px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: white; box-shadow: 0 8px 24px rgba(201,146,42,0.35); transition: transform 0.3s; }
+.process-step:hover .pnum { transform: scale(1.12); }
+.ptitle { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.pdesc { font-size: 12px; color: var(--muted); line-height: 1.55; }
+
+/* ── CTA ── */
+.cta-section { background: var(--gold); padding: 80px 5%; text-align: center; position: relative; overflow: hidden; }
+.cta-section::before { content: 'SUNRISE'; position: absolute; font-family: 'Cormorant Garamond', serif; font-size: 280px; font-weight: 600; color: rgba(255,255,255,0.06); top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none; letter-spacing: 8px; }
+.cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 60px); font-weight: 600; color: white; margin-bottom: 12px; position: relative; }
+.cta-desc { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 40px; position: relative; }
+.cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+.btn-white { padding: 16px 36px; background: white; color: var(--gold); border-radius: 4px; font-size: 14px; font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 9px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+.btn-white:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(0,0,0,0.2); }
+.btn-white svg { width: 17px; height: 17px; }
+.btn-white-outline { padding: 16px 36px; background: transparent; border: 1.5px solid rgba(255,255,255,0.6); color: white; border-radius: 4px; font-size: 14px; font-weight: 500; text-decoration: none; display: flex; align-items: center; gap: 9px; transition: background 0.2s, transform 0.2s; }
+.btn-white-outline:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
+.btn-white-outline svg { width: 17px; height: 17px; fill: white; }
+
+/* ── TRUST BAR ── */
+.trust-bar { background: white; padding: 52px 5%; display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; border-top: 1px solid var(--border); }
+.titem { display: flex; align-items: center; gap: 12px; padding: 12px 40px; border-right: 1px solid var(--border); }
+.titem:last-child { border-right: none; }
+.ticon { width: 42px; height: 42px; background: var(--gold-pale); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ticon svg { width: 20px; height: 20px; fill: var(--gold); }
+.ttitle { font-size: 13px; font-weight: 600; color: var(--ink); }
+.tsub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+/* ── FOOTER ── */
+footer { background: var(--ink); padding: 56px 5% 32px; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 28px; }
+.footer-brand {}
+.footer-logo-area { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.footer-logo-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; letter-spacing: 4px; color: white; text-transform: uppercase; }
+.footer-logo-tag { font-size: 9px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; display: block; margin-top: 2px; }
+.footer-tagline { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 10px; }
+.footer-gst-box { display: inline-block; background: rgba(201,146,42,0.1); border: 1px solid rgba(201,146,42,0.2); border-radius: 4px; padding: 6px 12px; font-size: 11px; color: var(--gold-light); letter-spacing: 1px; font-weight: 500; }
+.footer-links { display: flex; flex-direction: column; gap: 12px; }
+.footer-link { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+.footer-link:hover { color: var(--gold-light); }
+.footer-link svg { width: 15px; height: 15px; fill: var(--gold); flex-shrink: 0; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+.footer-india { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+/* ── FLOAT WA ── */
+.float-wa { position: fixed; bottom: 28px; right: 28px; z-index: 200; width: 58px; height: 58px; background: var(--wa); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 8px 32px rgba(37,211,102,0.4); transition: transform 0.25s, box-shadow 0.25s; animation: floatIn 0.8s ease 1s both; }
+.float-wa:hover { transform: scale(1.1); box-shadow: 0 12px 48px rgba(37,211,102,0.6); }
+.float-wa svg { width: 28px; height: 28px; fill: white; }
+.float-wa-ring { position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--wa); opacity: 0; animation: waping 2.5s infinite 1.8s; }
+@keyframes waping { 0%{opacity:0.6;transform:scale(1)} 100%{opacity:0;transform:scale(1.5)} }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp { from{opacity:0;transform:translateY(22px)} to{opacity:1;transform:translateY(0)} }
+@keyframes floatIn { from{opacity:0;transform:scale(0.4)} to{opacity:1;transform:scale(1)} }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 100px 6% 60px; }
+  .hero-right { min-height: 320px; padding: 48px 6%; }
+  .stat { padding: 12px 24px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .stat:last-child { border-bottom: none; }
+  .process-steps::before { display: none; }
+  .process-steps { gap: 28px; }
+  .titem { padding: 12px 20px; border-right: none; border-bottom: 1px solid var(--border); }
+  .titem:last-child { border-bottom: none; }
+  .nav-since { display: none; }
+  .btn-nav-call span, .btn-nav-wa span { display: none; }
+  .btn-nav-call, .btn-nav-wa { padding: 9px 12px; }
+  nav { padding: 0 4%; }
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918178077309?text=Hi%20Sunrise%20Industries%2C%20I%20need%20a%20quote%20for%20packaging." class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp us">
+  <div class="float-wa-ring"></div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <!-- SVG sunrise logo recreated from template -->
+    <svg class="nav-logo-svg" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Sun rays -->
+      <line x1="22" y1="4" x2="22" y2="8" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="32.5" y1="7.5" x2="30" y2="10" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="38" y1="16" x2="34.5" y2="17.5" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="11.5" y1="7.5" x2="14" y2="10" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+      <line x1="6" y1="16" x2="9.5" y2="17.5" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+      <!-- Half circle sun -->
+      <path d="M8 26 A14 14 0 0 1 36 26" stroke="#C9922A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <!-- Horizon line -->
+      <line x1="4" y1="26" x2="40" y2="26" stroke="#C9922A" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- decorative lines below horizon like the template -->
+      <line x1="8" y1="30" x2="36" y2="30" stroke="#C9922A" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+      <line x1="12" y1="34" x2="32" y2="34" stroke="#C9922A" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+    </svg>
+    <div class="nav-logo-wordmark">
+      <span class="nav-logo-name">Sunrise</span>
+      <span class="nav-logo-sub">— Industries —</span>
+    </div>
+  </a>
+
+  <div class="nav-right">
+    <div class="nav-since">
+      Manufacturing since
+      <span>Est. 1994</span>
+    </div>
+    <div class="nav-btns">
+      <a href="tel:+918178077309" class="btn-nav-call">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        <span>Call Now</span>
+      </a>
+      <a href="https://wa.me/918178077309?text=Hi%20Sunrise%20Industries%2C%20I%20need%20a%20quote." class="btn-nav-wa" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <div class="hero-badge"><div class="hero-badge-dot"></div> Okhla, New Delhi &nbsp;·&nbsp; Est. 1994</div>
+
+    <h1 class="hero-headline">
+      Your Box.<br>
+      Your Brand.<br>
+      <span class="gold">Our Promise.</span>
+    </h1>
+    <p class="hero-oneliner">Packaging That Works as Hard as You Do</p>
+    <p class="hero-desc">
+      For over <strong>30 years</strong>, Sunrise Industries has been the trusted packaging partner for businesses across India — from first-time startups to large factories. We manufacture, you grow.
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/918178077309?text=Hi%20Sunrise%20Industries%2C%20I%20need%20a%20quote%20for%20packaging." class="btn-gold" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Get Free Quote
+      </a>
+      <a href="tel:+918178077309" class="btn-outline">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        +91 81780 77309
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-watermark">SI</div>
+    <div class="hero-cards">
+      <div class="hcard">
+        <div class="hcard-icon g">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div><div class="hcard-title">Corrugated Boxes</div><div class="hcard-sub">3-ply · 5-ply · 7-ply · All sizes</div></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-icon d">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <div><div class="hcard-title">Paper Carry Bags</div><div class="hcard-sub">Kraft · Printed · Eco-friendly</div></div>
+      </div>
+      <div class="hcard">
+        <div class="hcard-icon g">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div><div class="hcard-title">Custom Printing</div><div class="hcard-sub">Logo · Brand colors · Any design</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat reveal"><div class="stat-num">30+</div><div class="stat-label">Years in Business</div></div>
+  <div class="stat reveal"><div class="stat-num">All</div><div class="stat-label">Ply Options Available</div></div>
+  <div class="stat reveal"><div class="stat-num">100%</div><div class="stat-label">Custom Printing</div></div>
+  <div class="stat reveal"><div class="stat-num">Pan</div><div class="stat-label">India Delivery</div></div>
+</div>
+
+<!-- TAGLINES MARQUEE -->
+<div class="taglines-strip">
+  <div class="taglines-inner" id="marquee">
+    <span class="tline">Boxes That Protect. Brands That Impress.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">We Don't Just Pack Products. We Pack Reputations.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">Built to Last. Priced to Grow.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">30 Years of Strength in Every Layer.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">From Our Factory. Straight to Your Door.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">Your Packaging. Our Precision. Since 1994.</span>
+    <span class="tline-dot">✦</span>
+    <!-- duplicate for seamless loop -->
+    <span class="tline">Boxes That Protect. Brands That Impress.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">We Don't Just Pack Products. We Pack Reputations.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">Built to Last. Priced to Grow.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">30 Years of Strength in Every Layer.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">From Our Factory. Straight to Your Door.</span>
+    <span class="tline-dot">✦</span>
+    <span class="tline">Your Packaging. Our Precision. Since 1994.</span>
+    <span class="tline-dot">✦</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+  <div class="section-label">What We Manufacture</div>
+  <h2 class="section-title">Our <span class="gold">Products</span></h2>
+  <p class="section-desc">Every box and bag built to your exact specification — size, strength, ply, print. Factory direct. No middlemen.</p>
+  <div class="products-grid">
+
+    <div class="product-card reveal">
+      <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+      <h3 class="pc-title">3-Ply Corrugated Boxes</h3>
+      <p class="pc-desc">Lightweight, economical packaging perfect for retail, apparel, gifting and light products. Single-wall strength.</p>
+      <div class="pc-tags"><span class="ptag">Custom Size</span><span class="ptag">Custom Print</span><span class="ptag">White / Kraft</span></div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+      <h3 class="pc-title">5-Ply Corrugated Boxes</h3>
+      <p class="pc-desc">Heavy-duty boxes for electronics, FMCG, machinery and industrial use. Superior stacking and compression strength.</p>
+      <div class="pc-tags"><span class="ptag">Heavy Duty</span><span class="ptag dk">Industrial Grade</span><span class="ptag">Custom Print</span></div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg></div>
+      <h3 class="pc-title">7-Ply Corrugated Boxes</h3>
+      <p class="pc-desc">Maximum protection for export shipments, heavy goods and fragile items. Double-wall construction, built for the toughest journeys.</p>
+      <div class="pc-tags"><span class="ptag dk">Export Grade</span><span class="ptag">Double Wall</span><span class="ptag">Max Strength</span></div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+      <h3 class="pc-title">Paper Carry Bags</h3>
+      <p class="pc-desc">Eco-friendly kraft and white paper carry bags for retail, boutiques, restaurants and events. Branded or plain.</p>
+      <div class="pc-tags"><span class="ptag">Eco-Friendly</span><span class="ptag">Kraft / White</span><span class="ptag">Custom Print</span></div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+      <h3 class="pc-title">Custom Printed Packaging</h3>
+      <p class="pc-desc">Your logo, brand colors and artwork on every box or bag. Make every delivery a brand impression that customers remember.</p>
+      <div class="pc-tags"><span class="ptag">Logo Print</span><span class="ptag">Full Color</span><span class="ptag dk">MOQ Flexible</span></div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="pc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9922A" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <h3 class="pc-title">Bulk &amp; B2B Supply</h3>
+      <p class="pc-desc">Regular supply contracts for ecommerce warehouses, factories and distributors. Pan-India shipping. Factory-direct pricing.</p>
+      <div class="pc-tags"><span class="ptag dk">Pan India</span><span class="ptag">Recurring Orders</span><span class="ptag">Factory Direct</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section" id="why">
+  <div class="section-label" style="color:rgba(201,146,42,0.6)">Why Choose Us</div>
+  <h2 class="section-title"><span class="white">The Sunrise</span> <span class="gold">Difference</span></h2>
+  <p class="section-desc">We're not a middleman. We're the manufacturer. That means better prices, faster delivery, and total control over quality — every single order.</p>
+  <div class="why-grid">
+    <div class="why-card reveal"><div class="why-num">01</div><h3 class="why-title">30 Years of Trust</h3><p class="why-desc">Since 1994, hundreds of businesses have trusted Sunrise for packaging that never lets them down.</p></div>
+    <div class="why-card reveal"><div class="why-num">02</div><h3 class="why-title">Direct from Factory</h3><p class="why-desc">No agents. No resellers. You get manufacturer-direct pricing on every order, always.</p></div>
+    <div class="why-card reveal"><div class="why-num">03</div><h3 class="why-title">Any Quantity</h3><p class="why-desc">1000 pieces preferred but we accommodate all sizes. Startups to large factories — all welcome.</p></div>
+    <div class="why-card reveal"><div class="why-num">04</div><h3 class="why-title">Custom Everything</h3><p class="why-desc">Size, ply, color, print, finish — every detail built exactly to your specification.</p></div>
+    <div class="why-card reveal"><div class="why-num">05</div><h3 class="why-title">GST Compliant</h3><p class="why-desc">Fully GST registered. Proper invoices so your business gets smooth input tax credit.</p></div>
+    <div class="why-card reveal"><div class="why-num">06</div><h3 class="why-title">Always Reachable</h3><p class="why-desc">Call or WhatsApp directly. Real people, real answers — no call centers, no bots.</p></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div style="text-align:center">
+    <div class="section-label" style="text-align:center">How It Works</div>
+    <h2 class="section-title" style="text-align:center">Order in <span class="gold">4 Simple Steps</span></h2>
+    <p class="section-desc" style="text-align:center;margin:0 auto">From your first message to boxes at your door. Simple, fast, reliable.</p>
+  </div>
+  <div class="process-steps" style="margin-top:56px">
+    <div class="process-step reveal"><div class="pnum">1</div><div class="ptitle">WhatsApp / Call Us</div><div class="pdesc">Tell us your box size, ply, quantity, and if you need custom printing.</div></div>
+    <div class="process-step reveal"><div class="pnum">2</div><div class="ptitle">Get Your Quote</div><div class="pdesc">We send you the best factory-direct price within hours. No hidden charges.</div></div>
+    <div class="process-step reveal"><div class="pnum">3</div><div class="ptitle">Confirm & Produce</div><div class="pdesc">Approve the quote, share your artwork if printed, and we begin manufacturing.</div></div>
+    <div class="process-step reveal"><div class="pnum">4</div><div class="ptitle">Delivered to You</div><div class="pdesc">Fast delivery across Delhi NCR. Pan-India shipping available.</div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2 class="cta-title">Ready to Order Your Boxes?</h2>
+  <p class="cta-desc">Get a free quote in under 2 hours. Just tell us your size, ply, and quantity.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/918178077309?text=Hi%20Sunrise%20Industries%2C%20I%20need%20a%20quote%20for%20packaging." class="btn-white" target="_blank">
+      <svg viewBox="0 0 24 24" style="fill:#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp for Free Quote
+    </a>
+    <a href="tel:+918178077309" class="btn-white-outline">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call +91 81780 77309
+    </a>
+    <a href="https://share.google/c0TH1UOzHGRqNoeJC" class="btn-white-outline" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      View on Google Maps
+    </a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="titem reveal"><div class="ticon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><div><div class="ttitle">GST Registered</div><div class="tsub">07AHVPD4823E1ZC</div></div></div>
+  <div class="titem reveal"><div class="ticon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="ttitle">Est. 1994</div><div class="tsub">30+ years of manufacturing</div></div></div>
+  <div class="titem reveal"><div class="ticon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><div><div class="ttitle">Okhla, New Delhi</div><div class="tsub">Fast Delhi NCR delivery</div></div></div>
+  <div class="titem reveal"><div class="ticon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div><div class="ttitle">Pan India Delivery</div><div class="tsub">We ship anywhere in India</div></div></div>
+  <div class="titem reveal"><div class="ticon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div><div class="ttitle">500+ Clients Served</div><div class="tsub">Startups to large factories</div></div></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo-area">
+        <svg width="38" height="38" viewBox="0 0 44 44" fill="none">
+          <line x1="22" y1="4" x2="22" y2="8" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+          <line x1="32.5" y1="7.5" x2="30" y2="10" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+          <line x1="38" y1="16" x2="34.5" y2="17.5" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11.5" y1="7.5" x2="14" y2="10" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+          <line x1="6" y1="16" x2="9.5" y2="17.5" stroke="#C9922A" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8 26 A14 14 0 0 1 36 26" stroke="#C9922A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          <line x1="4" y1="26" x2="40" y2="26" stroke="#C9922A" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="8" y1="30" x2="36" y2="30" stroke="#C9922A" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+          <line x1="12" y1="34" x2="32" y2="34" stroke="#C9922A" stroke-width="1" stroke-linecap="round" opacity="0.2"/>
+        </svg>
+        <div>
+          <div class="footer-logo-name">Sunrise</div>
+          <span class="footer-logo-tag">— Industries —</span>
+        </div>
+      </div>
+      <p class="footer-tagline">Corrugated Box &amp; Paper Carry Bag Manufacturer · Okhla, New Delhi</p>
+      <div class="footer-gst-box">GST: 07AHVPD4823E1ZC</div>
+    </div>
+    <div class="footer-links">
+      <a href="tel:+918178077309" class="footer-link"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>+91 81780 77309</a>
+      <a href="https://wa.me/918178077309" class="footer-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp Us</a>
+      <a href="mailto:sunriseindustries2013@gmail.com" class="footer-link"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>sunriseindustries2013@gmail.com</a>
+      <a href="https://share.google/c0TH1UOzHGRqNoeJC" class="footer-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>View on Google Business</a>
+      <a href="https://share.google/c0TH1UOzHGRqNoeJC" class="footer-link" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Okhla Industrial Area, New Delhi</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Sunrise Industries. All rights reserved. · Est. 1994</div>
+    <div class="footer-india">GST: 07AHVPD4823E1ZC &nbsp;·&nbsp; Made in India 🇮🇳</div>
+  </div>
+</footer>
+
+<script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); });
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 90);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
