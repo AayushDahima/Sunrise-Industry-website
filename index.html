@@ -248,6 +248,22 @@ section { padding: 96px 5%; position: relative; }
 .ptag { font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 100px; background: var(--gold-pale); color: var(--gold); border: 1px solid rgba(201,146,42,0.15); }
 .ptag.dk { background: #F2F2F2; color: #555; border-color: #E0E0E0; }
  
+/* ── GALLERY / OUR WORK ── */
+.gallery-section { background: var(--gold-pale); }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 56px; }
+.gallery-card {
+  background: white; border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden; transition: transform 0.25s, box-shadow 0.25s;
+}
+.gallery-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(201,146,42,0.15); }
+.gallery-img-wrap { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #f0ede4; }
+.gallery-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+.gallery-card:hover .gallery-img-wrap img { transform: scale(1.06); }
+.gallery-body { padding: 18px 20px 20px; }
+.gallery-title { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.gallery-desc { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+.gallery-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+ 
 /* ── WHY US ── */
 .why-section { background: var(--section-dark); }
 .why-section .section-desc { color: rgba(255,255,255,0.4); }
@@ -527,6 +543,88 @@ footer { background: var(--ink); padding: 56px 5% 32px; }
       <div class="pc-tags"><span class="ptag dk">Pan India</span><span class="ptag">Recurring Orders</span><span class="ptag">Factory Direct</span></div>
     </div>
  
+  </div>
+</section>
+ 
+<!-- OUR WORK / GALLERY -->
+<section class="gallery-section" id="work">
+  <div class="section-label">From Our Factory Floor</div>
+  <h2 class="section-title">Samples We've <span class="gold">Manufactured</span></h2>
+  <p class="section-desc">A few real boxes and bags off our production line — for D2C brands, ecommerce sellers and retail labels across India.</p>
+  <div class="gallery-grid">
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/club-nutts-printed-box.jpg" alt="Custom printed corrugated box for Club Nutts" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Full-Colour Printed Retail Carton</h3>
+        <p class="gallery-desc">Vibrant red-yellow gradient print with brand artwork wrapped edge-to-edge, produced and packed in bulk for a snacks &amp; nuts brand.</p>
+        <div class="gallery-tags"><span class="ptag">Full Color Print</span><span class="ptag dk">Bulk Packed</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/mildcares-cramp-relief-box.jpg" alt="Mildcares Cramp Relief Massager retail packaging box" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Premium Retail Packaging</h3>
+        <p class="gallery-desc">High-resolution offset print with lifestyle imagery and feature icons — built for shelf appeal on a health &amp; wellness electronics brand.</p>
+        <div class="gallery-tags"><span class="ptag">Custom Print</span><span class="ptag">Retail Grade</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/mariya-kraft-shipping-box.jpg" alt="Mariya by Dal Samarkand kraft shipping carton" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Branded Kraft Shipping Carton</h3>
+        <p class="gallery-desc">Natural kraft 3-ply box with single-colour brand logo and QR code print — a clean, eco-friendly look for a gourmet food brand's shipments.</p>
+        <div class="gallery-tags"><span class="ptag">Eco-Friendly Kraft</span><span class="ptag dk">Logo Print</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/mildcares-massager-unfolded.jpg" alt="Mildcares M1 Gun Massager die-cut unfolded carton" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Die-Cut Box with Inside Print</h3>
+        <p class="gallery-desc">Unfolded view of a custom die-cut carton — full exterior branding plus matching interior product artwork panel.</p>
+        <div class="gallery-tags"><span class="ptag">Custom Die-Cut</span><span class="ptag">Inside + Outside Print</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/gynocup-mailer-box.jpg" alt="Gynocup branded kraft mailer box" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Small Kraft Mailer Box</h3>
+        <p class="gallery-desc">Compact kraft mailer with a stamped brand logo and thank-you note — ideal for D2C ecommerce unboxing.</p>
+        <div class="gallery-tags"><span class="ptag dk">D2C Mailer</span><span class="ptag">Kraft Finish</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/forever-new-paper-bag.jpg" alt="Forever New branded paper carry bag" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Branded Paper Carry Bag</h3>
+        <p class="gallery-desc">Sturdy rope-handle paper bag with foil-stamped logo — finished alongside our packing tape and kraft sheet stock.</p>
+        <div class="gallery-tags"><span class="ptag">Paper Carry Bag</span><span class="ptag dk">Foil Branding</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/export-fragile-carton.jpg" alt="Export grade fragile corrugated shipping carton" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Export-Grade Shipping Carton</h3>
+        <p class="gallery-desc">Heavy-duty multi-ply box sealed and marked Fragile / Handle With Care — built for safe long-distance courier transit.</p>
+        <div class="gallery-tags"><span class="ptag">Export Grade</span><span class="ptag">Fragile Handling</span></div>
+      </div>
+    </div>
+
+    <div class="gallery-card reveal">
+      <div class="gallery-img-wrap"><img src="images/gallery/plain-kraft-carton.jpg" alt="Plain unprinted kraft corrugated box" loading="lazy"></div>
+      <div class="gallery-body">
+        <h3 class="gallery-title">Plain Stock Corrugated Box</h3>
+        <p class="gallery-desc">Unprinted natural kraft carton, ready in standard sizes for businesses that need fast, no-frills packaging supply.</p>
+        <div class="gallery-tags"><span class="ptag dk">Stock Size</span><span class="ptag">Quick Turnaround</span></div>
+      </div>
+    </div>
+
   </div>
 </section>
  
